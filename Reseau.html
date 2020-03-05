@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/vendors/bootstrap.css">
+    <link rel="stylesheet" href="css/vendors/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css"> 
+    <title>Document</title>
+</head>
+<body>
+  
+    <header>
+        <div class="container">
+            <div class="row">
+
+                <i class="icon fa fa-bars fa-2x"></i>
+
+                <div class="col-md-3 col-xs-12">
+                    <div class="logo">
+                        <h2>AVENTIX</h2>
+                    </div>
+                </div>
+                
+                <nav class="navbar navbar">
+                    <div class="container-fluid">
+
+                        <ul class="nav navbar-nav">
+                          <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <span class="glyphicon glyphicon-home"></span> Accueil</a>
+                                    <ul class="dropdown-menu">
+                                      <li><a href="Employeurs.html">Employeurs</a></li>
+                                      <li><a href="Salaries.html">Salariés</a></li>
+                                      <li><a href="Commercants.html">Commerçants</a></li>
+                                    </ul>
+
+                          <li><a href="Presentation.html"><span class="glyphicon glyphicon-credit-card"></span>  Présentation</a></li>
+                          <li><a href="Reseau.html"><span class="glyphicon glyphicon-search"></span> Réseau partenaire</a></li>
+                          <li><a href="Contact.html"><span class="glyphicon glyphicon-envelope"></span> Nous contacter</a></li>
+                        </ul>
+                        
+                        <ul class="nav navbar-nav navbar-right">                      
+                         <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <span class="glyphicon glyphicon-user"></span> Connexion</a>
+                                    <ul class="dropdown-menu">
+                                      <?php
+                                         if (isset($_SESSION['connecte']) && $_SESSION['connecte']==1): ?>
+                                          <button type="submit" class="btn btn-danger" >Se déconnecter</button>
+                                         <?php else: ?>
+                                          <a class ="btn btn-success" href ="Connexion.html" role ="button"> Se connecter </a>
+                                          <a class ="btn btn-success" href ="CreationCompte.html" role ="button"> S'inscrire </a>
+                                     <?php endif ?>
+                                    </ul>
+                        </ul>
+                    </div>
+                </nav> 
+            </div>
+        </div>
+    </header>
+    
+    <section class="sections home text-center">
+        <div class="overlay">
+           <div class="container-fluid">
+                <div class="map-responsive">
+                    <iframe class="well well -sm col-xs-8" 
+                    src="https://www.google.com/maps/d/embed?mid=13OTKZbc_--xXDq2420OhR4NVbKcUf_qm" width="640" height="480"></iframe>
+                </div>
+            </div>
+        </div>      
+    </section>
+        
+    <section class="section aproposdenous">
+        <div class="container">
+              <div class="text-center">
+                   <h2 class="section title">A propos de nous</h2>
+                   <div class="line"><span></span></div> 
+                   <p class="paragraph">Aventix propose aux entreprises une alternative aux tickets restaurants en papier en les remplaçant par des cartes à puces utilisables sur un réseau de plus de 40 000 commerçants partenaires</p>
+              </div>      
+        </div>
+    </section>
+    
+    <div class="test"></div>
+   
+    <script src="js/vendors/jquery-3.4.1.min.js"></script> 
+    <script src="js/vendors/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
